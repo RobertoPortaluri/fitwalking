@@ -1,0 +1,51 @@
+.appuntamenti-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.schedule-card {
+  background: white url('/assets/long_card.png') no-repeat center;
+  background-size: cover;
+  border-radius: 1.75rem !important;
+  border: 3px solid #000000;
+  margin: 2rem 0;
+  padding: 1rem 3rem !important;
+}
+
+.schedule-card mat-card-title {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.schedule-card mat-card-content {
+  padding-top: 1rem;
+}
+
+.schedule-card ul {
+  list-style: none;
+  padding: 0;
+  color: #333;
+}
+
+.schedule-card li {
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  background: white;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.schedule-card p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}

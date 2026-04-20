@@ -1,15 +1,16 @@
 <div class="home-container">
-  <h1>Fitwalking Ruffano</h1>
-  <p>Benvenuti nel gruppo di camminata di Ruffano!</p>
-  
-  <div class="schedule">
-    <h2>📅 I nostri appuntamenti</h2>
-    <ul>
-      <li><strong>Lunedì</strong> - Camminata serale 19:30</li>
-      <li><strong>Mercoledì</strong> - Camminata serale 19:30</li>
-      <li><strong>Venerdì</strong> - Camminata serale 19:30</li>
-      <li><strong>Domenica</strong> - Eventi speciali</li>
-    </ul>
+  <div class="header">
+    <img src="/assets/logo.png" alt="Logo Fitwalking" class="logo">
+    <h1>Fitwalking Ruffano</h1>
   </div>
-  <p class="location">📍Via dei Falchi,10 (Statua Padre Pio) Ruffano, Provincia di Lecce</p>
+  <p class="subtitle">Benvenuti nel gruppo di camminata di Ruffano!</p>
+  
+  <div class="cards-grid">
+    <mat-card class="nav-card" *ngFor="let card of cards" [routerLink]="card.route">
+      <mat-card-content>
+        <h2>{{ card.title }}</h2>
+        <p>{{ card.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
