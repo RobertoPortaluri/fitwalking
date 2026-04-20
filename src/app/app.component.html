@@ -14,9 +14,9 @@
   }
 
   nav {
-    background: linear-gradient(90deg, #F0070C 0%, #CC26D5 50%, #7702FF 100%);
+    background: white;
     padding: 1rem 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   }
 
   .nav-content {
@@ -24,36 +24,92 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 2rem;
   }
 
   .logo {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     font-weight: bold;
-    color: white;
+    color: #333;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .logo img {
+    height: 60px;
+    width: auto;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .logo-main {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: #000;
+  }
+
+  .logo-subtitle {
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: #666;
   }
 
   .nav-links {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
+    flex: 1;
+    justify-content: center;
   }
 
   .nav-links a {
-    color: white;
+    color: #333;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    transition: background 0.3s ease;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
     font-weight: 500;
+    font-size: 0.95rem;
   }
 
   .nav-links a:hover,
   .nav-links a.active {
-    background: rgba(255, 255, 255, 0.2);
+    color: #E91E63;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .join-btn {
+    padding: 0.6rem 1.5rem;
+    background: white;
+    color: #333;
+    text-decoration: none;
+    border: 3px solid #e0e0e0;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .join-btn:hover {
+    border: 3px solid transparent;
+    background: 
+      linear-gradient(white, white) padding-box,
+      linear-gradient(90deg, #E91E63, #FFC107, #00BCD4, #2196F3) border-box;
   }
 
   main {
@@ -75,12 +131,21 @@
 <div class="app-container">
   <nav>
     <div class="nav-content">
-      <a routerLink="/" class="logo">🚶‍♂️ Fitwalking Ruffano</a>
+      <a routerLink="/" class="logo">
+        <img src="/assets/logo.png" alt="Fitwalking Group Ruffano Logo">
+        <div class="logo-text">
+          <span class="logo-main">FITWALKINGGROUP</span>
+          <span class="logo-subtitle">Camminare BENE per stare BENE</span>
+        </div>
+      </a>
       <ul class="nav-links">
         <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-        <li><a routerLink="/info" routerLinkActive="active">Info</a></li>
+        <li><a routerLink="/info" routerLinkActive="active">Chi Siamo</a></li>
         <li><a routerLink="/foto" routerLinkActive="active">Foto</a></li>
       </ul>
+      <div class="nav-actions">
+        <a routerLink="/info" class="join-btn">Unisciti a Noi ➜</a>
+      </div>
     </div>
   </nav>
 
