@@ -56,3 +56,45 @@ h1 {
   color: #666;
   margin-top: 2rem;
 }
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+  .sponsor-container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .sponsor-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .sponsor-card {
+    padding: 1rem 2rem !important;
+  }
+
+  .sponsor-card mat-card-content {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .sponsor-card {
+    padding: 0.75rem 1.5rem !important;
+  }
+
+  .sponsor-card mat-card-content {
+    font-size: 1rem;
+  }
+}

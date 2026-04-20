@@ -49,3 +49,46 @@ h1 {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+  .appuntamenti-container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .schedule-card {
+    padding: 1rem 2rem !important;
+  }
+
+  .schedule-card mat-card-title {
+    font-size: 1.3rem;
+  }
+
+  .schedule-card li,
+  .schedule-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .schedule-card {
+    padding: 0.75rem 1.5rem !important;
+  }
+
+  .schedule-card mat-card-title {
+    font-size: 1.1rem;
+  }
+
+  .schedule-card li,
+  .schedule-card p {
+    font-size: 0.95rem;
+  }
+}
